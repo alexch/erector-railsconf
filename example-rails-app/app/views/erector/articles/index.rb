@@ -5,7 +5,7 @@ class Views::Erector::Articles::Index < Erector::RailsWidget
     column :created_at, "Date Created" do |article| 
       text article.created_at.to_s(:long)
     end
-    row_classes :even, :odd
+    row_classes :dark, :light
   end
 
   def content

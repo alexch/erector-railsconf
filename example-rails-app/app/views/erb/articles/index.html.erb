@@ -6,7 +6,7 @@
     <th>Date Created</th>
   </tr>
   <%- @articles.each do |article| -%>
-  <tr>
+  <tr class="<%= cycle("light", "dark") %>">
     <td><%=h article.title %></td>
     <td><%=h article.created_at.to_s(:long) %></td>
   </tr>

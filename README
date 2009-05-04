@@ -1,0 +1,32 @@
+    
+    rails example-rails-app
+    cd example-rails-app
+    script/plugin install git://github.com/pivotal/erector.git    
+
+    If you are using erector for inheritance, be sure to set layout to nil, or remove whichever application-level layout you have.
+
+    Builder syntax
+    Interaction with layouts / partials in rails
+    Widget method
+    Live-Coding Example (15)
+    Generate app using a rails template generator
+    Require erector
+    Create erector scaffold (if I can build it by railsconf)
+    Write some view code
+    Use the table widget
+    Write a nested layout
+    Refactor some helper methods inline
+    Frank discussion of the benefits and drawbacks of Erector (5)
+    More verbose than erb
+    Less-tight integration with rails
+    More refactoring options
+    Nested layouts
+    Roadmap (5)
+    How to contribute
+    How to file bugs/feature requests
+    Questions
+    
+    TODO: 
+    
+    rename erect to erector
+    move attr_accessors to needs

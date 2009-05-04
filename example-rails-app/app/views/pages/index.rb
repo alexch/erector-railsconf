@@ -15,13 +15,13 @@ class Views::Pages::Index < Erector::RailsWidget
         div :class => "content" do
           ul do
             li do
-              text "Erector Samples"
+              span "Erector Samples", :class => "fancy"
               ul do
                 li { link_to "Articles", :controller => 'erector/articles' }
               end
             end
             li do
-              text "ERB Samples"
+              span(:class => "fancy"){ text "ERB Samples" }
               ul {
                 li { link_to "Articles", :controller => 'erb/articles' }
               }

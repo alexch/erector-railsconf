@@ -586,3 +586,61 @@ Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:08:28) 
 Rendering template within layouts/application
 Rendering erb/articles/index
 Completed in 21ms (View: 8, DB: 3) | 200 OK [http://localhost/erb/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:14:30) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 107ms (View: 100, DB: 2) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:14:32) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/erb/articles]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 13:14:23) [GET]
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 13:21:02) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 13:21:04) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 11ms (View: 5, DB: 2) | 200 OK [http://localhost/erb/articles]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 13:31:41) [GET]
+Rendering pages/index
+
+ActionView::TemplateError (/Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/views/pages/index.rb:24: syntax error, unexpected '{', expecting kEND
+              span :class => "fancy" { text "ERB Samples" }
+                                      ^
+/Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/views/pages/index.rb:24: syntax error, unexpected '}', expecting kEND) on line #24 of app/views/pages/index.rb:
+21:               end
+22:             end
+23:             li do
+24:               span :class => "fancy" { text "ERB Samples" }
+25:               ul {
+26:                 li { link_to "Articles", :controller => 'erb/articles' }
+27:               }
+
+    
+
+Rendered rescues/_trace (48.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 13:31:59) [GET]
+Rendering pages/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
