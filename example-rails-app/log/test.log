@@ -1,0 +1,104 @@
+  [4;36;1mArticle Create (1.5ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:12:08', 'value for title', 'value for content', '2009-05-04 17:12:08')[0m
+  [4;36;1mComment Create (1.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "content", "article_id", "created_at") VALUES('2009-05-04 17:12:15', 'value for content', 1, '2009-05-04 17:12:15')[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:44:48) [GET]
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 4ms (View: 0, DB: 0) | 200 OK [http://test.host/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:44:48) [GET]
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:44:48) [GET]
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:46:04) [GET]
+  [4;36;1mSQL (3.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:46:04) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:46:04) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:48:05) [GET]
+  [4;36;1mSQL (2.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:48:05) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:48:05) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:53:48) [GET]
+  [4;36;1mSQL (3.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:53:48) [GET]
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:53:48) [GET]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:54:03) [GET]
+  [4;36;1mArticle Load (2.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 5ms (View: 0, DB: 2) | 200 OK [http://test.host/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:54:03) [GET]
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://test.host/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 0.0.0.0 at 2009-05-04 10:54:03) [GET]
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://test.host/erb/articles]

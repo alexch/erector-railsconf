@@ -1,0 +1,588 @@
+
+
+Processing ErectorController#example_one (for 127.0.0.1 at 2009-05-04 10:01:31) [GET]
+Rendering erector/example_one
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/erector/example_one]
+
+
+Processing ErbController#example_one (for 127.0.0.1 at 2009-05-04 10:01:36) [GET]
+Rendering erb/example_one
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/erb/example_one]
+
+
+Processing ErectorController#example_one (for 127.0.0.1 at 2009-05-04 10:01:39) [GET]
+Rendering erector/example_one
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/erector/example_one]
+  [4;36;1mSQL (1.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090504170622)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090504170622')[0m
+Migrating to CreateArticles (20090504170954)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090504170954')[0m
+Migrating to CreateComments (20090504171018)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article_id" integer, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090504171018')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article_id" integer, "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090504171018')[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090504170622')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090504170954')[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 10:31:06) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 10:31:41) [GET]
+Rendering pages/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2009-05-04 10:34:17) [GET]
+Rendering pages/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-04 10:34:21) [GET]
+
+LoadError (Expected /Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/controllers/erector/articles_controller.rb to define Erector::ArticlesController):
+  
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-04 10:34:23) [GET]
+
+TypeError (superclass mismatch for class ArticlesController):
+  app/controllers/erb/articles_controller.rb:1
+
+Rendered rescues/_trace (133.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:34:55) [GET]
+Rendering erector/articles/index
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:34:57) [GET]
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/erb/articles]
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20090504170954)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090504170954')[0m
+Migrating to CreateComments (20090504171018)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "article_id" integer, "content" text, "username" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090504171018')[0m
+Migrating to PopulateDatabase (20090504173604)
+  [4;36;1mArticle Create (0.4ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'extend customized methodologies', 'Dolor veritatis dolorum culpa eum explicabo. Repellendus veritatis consequatur nesciunt temporibus. Corrupti blanditiis ut fugit ea dolores id eum voluptas.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'glen', 'Reprehenderit at sunt nesciunt est ut ducimus deserunt. Voluptate id exercitationem voluptatem. Dolor excepturi expedita incidunt laboriosam ea iure. Qui qui nihil voluptas.', 1, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'keven_mcclure', 'Distinctio neque sit fugiat ut blanditiis ullam. Occaecati tenetur reiciendis nobis nisi. Rerum aspernatur quia vitae maxime. Animi dolores quos veritatis qui cumque. Doloribus vero aut autem.', 1, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.4ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'caden.harvey', 'Magni qui sapiente expedita. Dolorem totam eaque qui facere. Eum reiciendis consequatur dolor qui quaerat in cupiditate cumque. Nam molestiae quo quidem.', 1, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'recontextualize clicks-and-mortar initiatives', 'Velit rerum quod temporibus. Quia accusamus debitis fugiat praesentium. Fugiat nam incidunt quia atque accusantium. Nihil error tempora non cum voluptas.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'kellie', 'Et et placeat nesciunt odio eius. Voluptatem in provident aut voluptatem atque facilis saepe. Odit quia temporibus id ullam quo a dolor vitae. Fuga sit unde debitis sequi. Et sint laudantium qui ratione consequatur.', 2, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'mac_bergnaum', 'Minus veritatis quaerat enim. Minus eaque adipisci voluptates quas ea. Nostrum voluptates omnis consequatur voluptatem ea. Et non dignissimos temporibus dicta.', 2, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'harness scalable communities', 'Ut voluptates suscipit minima sequi aliquid exercitationem. Sit et quas nam fugiat fugit atque. Ut corrupti doloremque minus non. Labore aut autem commodi quidem inventore earum voluptates voluptate.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'brooklyn_abbott', 'Consequatur accusantium dicta maxime asperiores dolores rerum reiciendis. Consequuntur vitae ut reprehenderit dolor. Iste voluptates recusandae ex consectetur illum provident optio suscipit. Dolores optio possimus amet molestias sit maxime. Sunt laboriosam cum sequi.', 3, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'talon_becker', 'Vel sapiente labore tenetur dolores amet cupiditate. Minus non nostrum eum deserunt qui excepturi hic enim. Eius et id possimus architecto sit ut. Voluptates ut rerum hic corporis nobis voluptatem quis non. Delectus quisquam nam incidunt ut voluptatem qui.', 3, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'elvie', 'Repudiandae doloremque maiores quis natus qui earum non. Consequatur amet ut debitis est sed sed. Id et error deserunt non. Consectetur laborum facilis odio qui sit quia voluptates fugit. Reiciendis distinctio vero quam ducimus.', 3, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'malachi.reichert', 'Magni eum ipsum quod ut sunt tempora non. Ut autem vel vero. Non dolorum et ut nihil.', 3, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'drive cutting-edge functionalities', 'Accusantium sit et cum reprehenderit. Magni necessitatibus aut sed. Ad omnis iste ut. Quaerat earum dignissimos facilis quibusdam nam sint. Consequuntur illum soluta sint porro.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'danielle.anderson', 'Sunt eos est vel nam. Non itaque molestiae molestiae. Unde et omnis nihil sequi ut laudantium voluptatem.', 4, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'shana_gleichner', 'Eos enim quo veritatis. Quaerat dolores non voluptatem quisquam. Eveniet rerum et cumque consequuntur qui dolorum.', 4, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'joany', 'Laudantium quo nobis incidunt libero eaque. Non laborum atque unde esse. Id quia non ipsum a ipsam enim.', 4, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'flossie_lakin', 'Quod et minus doloribus enim aperiam inventore autem accusantium. Qui alias ut voluptate saepe magnam odio assumenda minus. Quis est dolor est deleniti totam dignissimos quis repudiandae.', 4, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'minnie', 'Alias aut ullam dolore esse nesciunt pariatur dignissimos. Id consequuntur ipsum ad. Aperiam omnis reiciendis doloribus ipsa hic voluptatem vero. Minus delectus cupiditate natus et quos nam ut non. Labore et ut natus quis vel.', 4, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'disintermediate open-source technologies', 'Fugiat ut nisi ipsa nulla nobis. Expedita molestias assumenda natus ipsam totam ut. Soluta eos quam voluptatem et itaque ut voluptatibus. Facere est quia architecto optio sequi.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'irving', 'Iure debitis consequuntur qui sequi voluptatem. Repellendus ad iste eius vitae. Aspernatur ipsum ut ipsa. Sed ad repellat illum.', 5, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'claud', 'Est eveniet ducimus quia cumque. Consectetur ipsa ducimus odio voluptas animi culpa. Pariatur quaerat sit natus aut maiores. Velit sequi consequatur sit recusandae. Distinctio est et voluptate dolor qui consequatur adipisci et.', 5, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'clementine', 'Dignissimos est sapiente commodi ut magni magnam enim et. Dolorem amet similique ipsa. Impedit sint eos eos animi assumenda quaerat pariatur.', 5, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'deliver intuitive infomediaries', 'Aut sit illum repellat qui quibusdam eveniet facere adipisci. Repellat optio error est voluptas accusamus eos et quis. Iure officiis sit qui ut numquam. Perspiciatis illum laboriosam atque libero ipsum autem corrupti. Deserunt error alias et quos delectus incidunt.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'armando', 'Dolores et veritatis ducimus est quas ex. In cumque cum repudiandae. Rerum deserunt quam consequuntur rerum tempora.', 6, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'leone.braun', 'Tenetur molestias sit laboriosam praesentium omnis sunt dolorem. Dolor quis non labore impedit hic iste doloremque. Explicabo assumenda fuga rerum nesciunt saepe ut repudiandae.', 6, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'carissa', 'Suscipit quia culpa ad nihil consequatur adipisci. Et in ipsam quo natus fugit sit et. Praesentium recusandae id ut consequatur temporibus odio provident totam.', 6, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'drive mission-critical markets', 'Aut inventore optio incidunt in porro ducimus dolorem rem. Nihil aut ratione amet expedita omnis. Ut ipsa dignissimos deserunt rem iusto quo qui consequatur. Atque saepe dolorum et quis.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'linda.bailey', 'Aut voluptatem vitae quis et impedit libero. Sint nobis veritatis qui reiciendis. Nemo doloremque aperiam voluptas voluptatem. Dolorum amet eum id quia unde. Atque mollitia qui amet accusantium voluptatem dignissimos qui deserunt.', 7, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'amya.bradtke', 'Aut et sunt blanditiis voluptatem illo consectetur quia saepe. Veniam iusto eveniet consequatur ut dignissimos explicabo facilis. Commodi provident quam quo sapiente. Eos aut libero quia dolore ipsum unde ea.', 7, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'extend seamless e-business', 'Aut eaque corrupti blanditiis tempore id. Voluptates consectetur nesciunt et. Recusandae deserunt cupiditate blanditiis ab ut aperiam magni.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'ernesto.beatty', 'Natus vel dolorem aut. Autem at aut deleniti. Voluptas quia quidem cupiditate natus veniam repellendus est.', 8, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'ferne_champlin', 'Et et sit beatae iste et placeat qui officiis. Fugit ut temporibus est non sequi consequuntur ut. Voluptas fugiat quas labore. Expedita odio alias officiis enim aut sint aut commodi. Voluptate dolorem ut fugiat.', 8, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'cleora.yundt', 'Debitis ex qui molestiae atque. Placeat ratione quasi necessitatibus id et rerum ea. Sit optio ea consequatur omnis quis laboriosam fugit. Repellat qui enim est atque. Ratione dolores sit aut quaerat ut nam eius deserunt.', 8, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'exploit frictionless relationships', 'Qui saepe nemo omnis rem non sint minus repellat. Rerum quidem in et aliquam. Repudiandae ducimus ut error quam. Atque non adipisci quidem vel deleniti sequi et molestiae.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'alvis.rath', 'Quae vero aut minus magnam et aspernatur. Consequatur velit occaecati praesentium officiis. Autem dolores ex doloremque nam magnam.', 9, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'emie.wilderman', 'Quidem ut eum et. Aut nemo id quos dolores minus non consequatur recusandae. Nobis corrupti voluptate sit quidem nostrum et ut odit. Et et repellat consequatur delectus consectetur voluptatum. Quidem nisi aut error sint optio et.', 9, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'berenice_carter', 'Ratione provident non corrupti temporibus quia recusandae ad facilis. Nesciunt et ducimus voluptatem eos. Sed sit quos odit explicabo aut. Quis consequatur ut enim.', 9, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'connor.bode', 'Maxime modi repudiandae reprehenderit consequatur est nisi harum. Ea magni dolor soluta reprehenderit iste in ab. Consequatur temporibus quo molestias placeat soluta rerum. Sapiente hic voluptatem aspernatur autem sunt nobis. Dolore voluptates modi quod dolores voluptatem qui qui illo.', 9, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'lilla.lind', 'Quis autem ex impedit dicta. Earum quia sunt qui. Voluptates quo pariatur est ipsam commodi repellat est consequuntur.', 9, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'reinvent scalable action-items', 'Labore est nam officiis rerum expedita perferendis. Id et placeat est distinctio ipsum minus et aut. Cum at quae rerum. Quo corporis porro nostrum adipisci.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'vickie', 'Odit quia magni quod. Iure ut dolorum quos veniam quia magni recusandae. Fugit et corporis ab est velit. Aut in velit aliquid sed.', 10, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'expedite 24/365 bandwidth', 'Sint quos et quia dolor reiciendis sunt. Est facere et ipsa in. Deserunt tempore culpa esse dolorum itaque est ut numquam. Possimus sapiente nihil occaecati. Veniam vitae qui enim qui molestiae sit voluptatem vero.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'oliver.wisoky', 'Et sequi debitis cum. Odit a rem sed facere odio. Sapiente et eos nulla sit.', 11, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'georgiana', 'Dolorum qui voluptatem cumque dolorem exercitationem quia veritatis enim. Qui aut beatae dolores. Consequuntur exercitationem cupiditate consequatur pariatur. Dicta unde quis quod. Eos dolore exercitationem sequi ab quia est cupiditate modi.', 11, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'innovate collaborative architectures', 'Enim voluptatem aut blanditiis labore maxime. Ut at est est beatae accusantium consectetur veniam facere. Qui rerum modi voluptatem est est voluptatibus officia. Aut reiciendis corrupti nisi. Non quis labore dolorem.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'natalia', 'Et nostrum omnis debitis repellendus sequi perspiciatis voluptas. Consequatur accusantium optio fuga et. Veniam ea tenetur quo aut laboriosam.', 12, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'charlie.keeling', 'Quo totam laborum itaque omnis unde praesentium. Aut ea maxime et neque libero quia ducimus. Id omnis et recusandae cumque repellat inventore delectus. Ducimus voluptatem expedita eos fugit non.', 12, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'sterling', 'Dolores unde illo incidunt. Perferendis aut autem aut laboriosam tempore. Voluptates aliquam fugit ullam est veniam mollitia delectus. Tempore et sint autem veritatis culpa qui fugit.', 12, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'sierra', 'Consectetur omnis sed consequatur voluptatem consequuntur assumenda qui. Esse ducimus quae iure totam. Unde et ut sed. Voluptatibus quos quia esse odio totam corrupti nihil provident.', 12, '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'arely_nikolaus', 'Perferendis rem beatae unde voluptas. Omnis voluptatem placeat fugit eum provident ullam. Harum molestiae beatae totam nihil. Architecto vel sequi accusamus.', 12, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'expedite intuitive paradigms', 'Dolores velit maiores neque iste. Sit quod nihil numquam sunt deserunt. Voluptate necessitatibus impedit alias itaque. Ipsa magni ea ut perspiciatis voluptatem repellat voluptas aut. Et ratione aperiam consequatur dignissimos ut.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'jean.gorczany', 'Cupiditate ab autem ducimus aliquid error molestias quod. Vero nulla amet voluptates numquam saepe delectus. Facilis consequatur et veritatis magni. Inventore accusamus cum rerum quae velit amet quod. Voluptatum et ut dicta autem nam modi iusto.', 13, '2009-05-04 17:39:55')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'redefine collaborative supply-chains', 'Aspernatur sit ut voluptate laboriosam quidem. Doloribus illum dolorem corporis eaque quaerat veritatis ullam. Omnis dignissimos laboriosam adipisci ea voluptas.', '2009-05-04 17:39:55')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'caesar.schmitt', 'Impedit eos ut fugiat. Aspernatur officiis iste delectus. Delectus quis quia magni qui corporis alias. At qui et inventore odio. Assumenda aperiam quo at ratione est.', 14, '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:55', 'pablo', 'Repellendus nihil ratione veritatis debitis laboriosam aut qui et. Quidem sunt corporis est. Voluptatem quo accusantium eaque sunt necessitatibus.', 14, '2009-05-04 17:39:55')[0m
+  [4;35;1mArticle Create (0.1ms)[0m   [0mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:55', 'grow proactive web-readiness', 'Non aut pariatur quis aut. Ipsa debitis mollitia quaerat ut ipsam. Repudiandae quae voluptatem accusamus id. Aut molestiae qui iusto. Repudiandae ut saepe quis quae iste assumenda consequatur.', '2009-05-04 17:39:55')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'stacy', 'Quia quidem aut consequatur. Id et explicabo sit nemo et sed. Voluptatem dolore quaerat illo ut eos et. Consequatur minus quo quaerat et reiciendis.', 15, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'angeline', 'Iure adipisci est in dignissimos asperiores dolorum. Non ullam et deserunt dolorem asperiores quibusdam tenetur. Tempora quasi et blanditiis maxime. Consectetur officiis debitis corrupti corporis dolorem. Ut nam ullam autem quasi et vitae.', 15, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'kayleigh', 'Consequatur porro ad doloribus placeat blanditiis ex. Qui maiores aut quo itaque placeat et. Ipsa incidunt aut qui libero velit nobis.', 15, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'toni', 'Sed ut rerum ea ea possimus. Qui culpa at tenetur fuga. Iure eum alias quia et laudantium corporis enim ut. Ipsam illum fugit et aliquam est earum quaerat perferendis.', 15, '2009-05-04 17:39:56')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:56', 'innovate web-enabled mindshare', 'Deleniti harum unde cupiditate iusto temporibus reiciendis voluptatem. Dolores fuga fugiat quo quis aut. Est natus exercitationem perspiciatis aut.', '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'pearl', 'Aut enim dolore ab. Qui fugit nihil amet quos sunt aspernatur. Fugit consequatur ipsum adipisci consequatur corrupti eius. Provident officiis ea fugiat fuga praesentium et voluptas.', 16, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'celia_gutkowski', 'Qui ut aut officiis voluptatum porro doloribus nostrum. Suscipit autem accusamus id dolor. Earum accusantium ex aut quod voluptas. Iure quasi ducimus eaque minus delectus. Recusandae sunt eius aut possimus et.', 16, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'gwen', 'Incidunt ipsa tempora vel doloremque in voluptatibus sunt. Voluptatem molestias neque fuga. Itaque iste ab et consequatur nihil alias explicabo non. Est sint nisi molestiae consequatur ex.', 16, '2009-05-04 17:39:56')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:56', 'incentivize interactive communities', 'Quod deserunt corporis ducimus alias officia animi. Voluptas et aperiam recusandae doloribus. Harum quis tempore maxime.', '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'freida', 'Ut repellat qui laudantium et tempora aliquam. Voluptas in asperiores doloribus velit pariatur sapiente itaque rerum. Non explicabo quis dolores et unde id. Officia aut consequatur itaque blanditiis similique. Laboriosam sapiente qui quo eveniet qui illum.', 17, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'leonie', 'Aspernatur cumque voluptate itaque quo omnis odit reprehenderit. Et nihil voluptate aut ipsa. Sed voluptatem sit vel.', 17, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.2ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'austin', 'Ipsum nobis dolore distinctio id a quia aut quibusdam. Nam quod tempora illum consequatur. Perferendis quidem impedit aperiam qui aspernatur labore quo.', 17, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'opal', 'Omnis eum qui est ullam. Maiores error ut dolor excepturi. Et sit saepe ipsam.', 17, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'blaze', 'Voluptatem nobis sint debitis. Deserunt similique ut voluptatibus maiores. Enim minus culpa quia sunt ut qui eveniet.', 17, '2009-05-04 17:39:56')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:56', 'visualize killer initiatives', 'Nostrum quia eius dolorem dignissimos. Beatae deserunt voluptatem modi sit. Illo saepe molestiae consequatur dicta quis tempora quo ut. Praesentium dolor perferendis possimus sequi iure quaerat.', '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'vinnie', 'Nemo non molestias et ratione praesentium cupiditate et. Ex ipsam commodi vitae magnam mollitia aut quo. Quam voluptates eum consequatur similique ex qui tempore incidunt.', 18, '2009-05-04 17:39:56')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:56', 'utilize strategic users', 'Voluptatem et ipsam qui aut quo. Debitis optio culpa sit corporis velit recusandae illo. Expedita in aut optio laboriosam ratione amet pariatur non. Omnis iste sed et deleniti sed dolor totam perferendis. Repudiandae nostrum quae dolor perspiciatis.', '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'cynthia', 'Optio voluptas cumque dolorem dolorem quas placeat. Qui velit vero tempora ullam quis reiciendis possimus quia. Qui ea maiores doloremque dolorem alias cumque recusandae omnis. Rerum sed non et.', 19, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.1ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'lenny', 'Voluptas voluptatem autem voluptatibus consequuntur nesciunt. Repudiandae veniam vel pariatur voluptate similique. Aut beatae dolorum dignissimos occaecati consequatur delectus.', 19, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'silas.emard', 'Eveniet minus adipisci et sed. Deleniti neque ipsa sint eum ipsum animi. Et qui iste voluptatem. Laborum quis dicta repellendus eligendi praesentium porro. Ab maxime expedita cum necessitatibus sunt possimus vero provident.', 19, '2009-05-04 17:39:56')[0m
+  [4;36;1mComment Create (0.2ms)[0m   [0;1mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'melody_sawayn', 'Et aut quidem laborum ex. Cupiditate vel autem sit occaecati reprehenderit. Eligendi velit rerum dignissimos error hic dolor. Illo doloribus fuga corporis dolorum. Ex cum doloremque accusamus.', 19, '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'beth.ledner', 'Sed sint aut voluptas ab. Ipsa dolores odio ut. Voluptates et tempora quia officia est ducimus. Nihil at dolores eligendi quis ut.', 19, '2009-05-04 17:39:56')[0m
+  [4;36;1mArticle Create (0.1ms)[0m   [0;1mINSERT INTO "articles" ("updated_at", "title", "content", "created_at") VALUES('2009-05-04 17:39:56', 'implement plug-and-play solutions', 'Aut laboriosam non consequatur nesciunt voluptate aut. Explicabo repudiandae ut commodi. Quisquam quis culpa dolorum quidem dignissimos earum assumenda. Iure enim odio soluta.', '2009-05-04 17:39:56')[0m
+  [4;35;1mComment Create (0.1ms)[0m   [0mINSERT INTO "comments" ("updated_at", "username", "content", "article_id", "created_at") VALUES('2009-05-04 17:39:56', 'judd', 'Nisi enim explicabo totam maiores autem officia. Voluptate quo excepturi enim. Rerum earum quis nostrum et cumque.', 20, '2009-05-04 17:39:56')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090504173604')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("comments")[0m
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:42:18) [GET]
+Rendering template within layouts/application
+Rendering erb/articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #8 of app/views/erb/articles/index.html.erb:
+5:     <th>Title</th>
+6:     <th>Date Created</th>
+7:   </tr>
+8:   <%- @articles.each do |article| -%>
+9:   <tr>
+10:     <td><%=h article.title %></td>
+11:     <td><%=h article.created_at.to_s(:long) %></td>
+
+    app/views/erb/articles/index.html.erb:8
+
+Rendered rescues/_trace (124.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:50:13) [GET]
+  [4;36;1mSQL (2.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `paginate' for #<Class:0x3cadb38>):
+  app/controllers/erb/articles_controller.rb:4:in `index'
+
+Rendered rescues/_trace (30.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:52:21) [GET]
+  [4;36;1mSQL (2.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `paginate' for #<Class:0x3ad1724>):
+  app/controllers/erb/articles_controller.rb:4:in `index'
+
+Rendered rescues/_trace (36.6ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:52:24) [GET]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `paginate' for #<Class:0x3e9cd7c>):
+  app/controllers/erb/articles_controller.rb:4:in `index'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:52:52) [GET]
+  [4;36;1mSQL (2.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `paginate' for #<Class:0x394fd10>):
+  app/controllers/erb/articles_controller.rb:4:in `index'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (81.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:55:46) [GET]
+  [4;36;1mArticle Load (3.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 390ms (View: 382, DB: 4) | 200 OK [http://localhost/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:56:04) [GET]
+  [4;35;1mArticle Load (2.3ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 14ms (View: 7, DB: 2) | 200 OK [http://localhost/erb/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:58:39) [GET]
+Rendering erector/articles/index
+
+ActionView::TemplateError (Erector's API has changed. Only pass options into Widget.new; the rest come in via to_s, or by using write_via(self) or render_widget.) on line #13 of app/views/erector/articles/index.html.rb:
+10: 
+11:     h2 "Articles"
+12: 
+13:     ArticlesTable.new(@articles)
+14: 
+15:   end
+16: 
+
+    app/views/erector/articles/index.html.rb:13:in `new'
+    app/views/erector/articles/index.html.rb:13:in `content'
+    app/views/erector/articles/index.html.rb:8:in `_run_rb_app47views47erector47articles47index46html46rb'
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:59:00) [GET]
+Rendering erector/articles/index
+
+ActionView::TemplateError (Erector's API has changed. Only pass options into Widget.new; the rest come in via to_s, or by using write_via(self) or render_widget.) on line #13 of app/views/erector/articles/index.html.rb:
+10: 
+11:     h2 "Articles"
+12: 
+13:     widget ArticlesTable.new(@articles)
+14: 
+15:   end
+16: 
+
+    app/views/erector/articles/index.html.rb:13:in `new'
+    app/views/erector/articles/index.html.rb:13:in `content'
+    app/views/erector/articles/index.html.rb:8:in `_run_rb_app47views47erector47articles47index46html46rb'
+
+Rendered rescues/_trace (41.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:59:13) [GET]
+Rendering erector/articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/erector/articles/index.html.rb:
+10: 
+11:     h2 "Articles"
+12: 
+13:     widget ArticlesTable, :articles => @articles
+14: 
+15:   end
+16: 
+
+    app/views/erector/articles/index.html.rb:13:in `content'
+    app/views/erector/articles/index.html.rb:8:in `_run_rb_app47views47erector47articles47index46html46rb'
+
+Rendered rescues/_trace (76.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:59:41) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (uninitialized constant Views::Erector::Articles::Index) on line #7 of app/views/erector/articles/index.html.rb:
+4:     column :title
+5:     column :created_at
+6:     row_classes :even, :odd
+7:   end
+8: 
+9:   def content
+10: 
+
+    app/views/erector/articles/index.html.rb:7:in `_run_rb_app47views47erector47articles47index46html46rb'
+
+Rendered rescues/_trace (66.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 10:59:57) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/erector/articles/index.rb:
+10: 
+11:     h2 "Articles"
+12: 
+13:     widget ArticlesTable, :articles => @articles
+14: 
+15:   end
+16: 
+
+    app/views/erector/articles/index.rb:13:in `content'
+    app/views/erector/articles/index.rb:8:in `_run_rb_app47views47erector47articles47index46rb'
+
+Rendered rescues/_trace (134.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:00:13) [GET]
+  [4;36;1mArticle Load (3.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 21ms (View: 8, DB: 4) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:03:22) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #13 of app/views/erector/articles/index.rb:
+10:     h2 "Articles"
+11: 
+12:     table = ArticlesTable.new(:articles => @articles)
+13:     widget table
+14:   end
+15: 
+16: end
+
+    app/views/erector/articles/index.rb:13:in `content'
+    app/views/erector/articles/index.rb:8:in `_run_rb_app47views47erector47articles47index46rb'
+
+Rendered rescues/_trace (72.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:04:29) [GET]
+  [4;36;1mArticle Load (1.5ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:05:03) [GET]
+  [4;35;1mArticle Load (2.1ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #11 of app/views/erector/articles/index.rb:
+8:   def content
+9:     h2 "Articles"
+10: 
+11:     widget ArticlesTable, :rows => @articles
+12:   end
+13: 
+14: end
+
+    app/views/erector/articles/index.rb:11:in `content'
+    app/views/erector/articles/index.rb:8:in `_run_rb_app47views47erector47articles47index46rb'
+
+Rendered rescues/_trace (76.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:05:20) [GET]
+  [4;36;1mArticle Load (2.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 26ms (View: 13, DB: 3) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:05:30) [GET]
+  [4;35;1mArticle Load (2.5ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 143ms (View: 132, DB: 3) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:05:41) [GET]
+  [4;36;1mArticle Load (2.3ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://localhost/erb/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:06:34) [GET]
+  [4;35;1mArticle Load (3.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 20ms (View: 6, DB: 4) | 200 OK [http://localhost/erb/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:06:35) [GET]
+  [4;36;1mArticle Load (2.3ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (undefined method `created_at' for :created_at:Symbol) on line #5 of app/views/erector/articles/index.rb:
+2: 
+3:   class ArticlesTable < Erector::Widgets::Table
+4:     column :title
+5:     column :created_at, proc{|article| article.created_at.to_s(:long)}
+6:     row_classes :even, :odd
+7:   end
+8: 
+
+    app/views/erector/articles/index.rb:5:in `__instance_exec0'
+    app/views/erector/articles/index.rb:12:in `content'
+    app/views/erector/articles/index.rb:8:in `_run_rb_app47views47erector47articles47index46rb'
+
+Rendered rescues/_trace (200.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:07:09) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (/Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/views/erector/articles/index.rb:5: syntax error, unexpected '{', expecting kEND
+    column :created_at {|article| article.created_at.to_s(:long)}
+                        ^
+/Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/views/erector/articles/index.rb:5: syntax error, unexpected '}', expecting kEND) on line #5 of app/views/erector/articles/index.rb:
+2: 
+3:   class ArticlesTable < Erector::Widgets::Table
+4:     column :title
+5:     column :created_at {|article| article.created_at.to_s(:long)}
+6:     row_classes :even, :odd
+7:   end
+8: 
+
+    
+
+Rendered rescues/_trace (184.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:07:25) [GET]
+  [4;36;1mArticle Load (3.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 35ms (View: 22, DB: 4) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:08:26) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+Completed in 24ms (View: 18, DB: 2) | 200 OK [http://localhost/erector/articles]
+
+
+Processing Erb::ArticlesController#index (for 127.0.0.1 at 2009-05-04 11:08:28) [GET]
+  [4;36;1mArticle Load (3.4ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering erb/articles/index
+Completed in 21ms (View: 8, DB: 3) | 200 OK [http://localhost/erb/articles]
