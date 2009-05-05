@@ -72,3 +72,13 @@ class Views::Erector::Articles::Show < Erector::RailsWidget
     widget ArticleTitle, :title => @article.title
   end
 end
+
+div
+div :class => "foo"
+div "Hello"
+div "Hello", :class => "foo"
+div :class => "foo" do
+end
+div :class => ["foo", "bar"] do
+end
+

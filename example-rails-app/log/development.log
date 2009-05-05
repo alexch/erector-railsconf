@@ -644,3 +644,22 @@ Rendering rescues/layout (internal_server_error)
 Processing PagesController#index (for 127.0.0.1 at 2009-05-04 13:31:59) [GET]
 Rendering pages/index
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing Erector::ArticlesController#index (for 127.0.0.1 at 2009-05-04 15:13:06) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering erector/articles/index
+
+ActionView::TemplateError (undefined method `needs' for Views::Erector::Articles::Index:Class) on line #3 of app/views/erector/articles/index.rb:
+1: class Views::Erector::Articles::Index < Erector::RailsWidget
+2: 
+3:   needs :articles
+4: 
+5:   class ArticlesTable < Erector::Widgets::Table
+6:     column :title
+
+    app/views/erector/articles/index.rb:3
+
+Rendered rescues/_trace (134.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

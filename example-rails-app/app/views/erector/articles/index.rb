@@ -1,5 +1,7 @@
 class Views::Erector::Articles::Index < Erector::RailsWidget
 
+  needs :articles
+
   class ArticlesTable < Erector::Widgets::Table
     column :title
     column :created_at, "Date Created" do |article| 

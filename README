@@ -30,3 +30,57 @@
     
     rename erect to erector
     move attr_accessors to needs
+    
+    Obstacles to working with rails:
+    
+    This is an issue
+    Wouldn't it be great if we could proxy to helpers using method missing...
+    For that to happen, everything would have to return a string
+    OR
+    Everything would have to output to the buffer
+    
+      # helpers returning raw text
+      [
+        :image_tag,
+        :javascript_include_tag,
+        :stylesheet_link_tag,
+        :sortable_element,
+        :sortable_element_js,
+        :text_field_with_auto_complete,
+
+      # helpers returning raw text whose first parameter is HTML escaped
+      [
+        :link_to,
+        :link_to_remote,
+        :mail_to,
+        :button_to,
+        :submit_tag,
+
+      # return text, take block
+      [
+        :link_to_function,
+        :text_field_tag,
+        :password_field_tag,
+        :check_box_tag
+
+      # render text, take block
+      [
+        :error_messages_for,
+        :form_tag,
+        :form_for,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
