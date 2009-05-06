@@ -58,6 +58,8 @@
 
       # return text, take block
       [
+        :link_to,
+        :link_to_remote,
         :link_to_function,
         :text_field_tag,
         :password_field_tag,

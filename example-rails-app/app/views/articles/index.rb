@@ -13,7 +13,7 @@ class Views::Erector::Articles::Index < Erector::RailsWidget
   def content
     h2 "Articles"
 
-    widget ArticlesTable, :row_objects => @articles
+    widget ArticlesTable, :row_objects => articles
   end
 
 end

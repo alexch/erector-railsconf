@@ -1,4 +1,28 @@
-# Intro
+# Views kind of suck
+
+  * Refactoring can be hard because of related code is scattered between views/partials and helpers module
+  * You are responsible for ensuring that tags are closed properly
+  * Expressing domain-specific language is done via filenames
+
+  * Nested layouts require 2 different techniques: layouts, partial layouts
+  * Auto-escaping is off by default (until Rails 3)
+
+# How do we solve these?
+
+  * As little magic as possible while maintaining Rails compatibility
+  * All ruby idioms work as expected (e.g. yield)
+  * Very testable
+
+# Erector to the rescue
+
+* Refactoring can be hard because of related code is scattered between views/partials and helpers module
+* You are responsible for ensuring that tags are closed properly
+* Expressing domain-specific language is done via filenames
+
+* Nested layouts require 2 different techniques: layouts, partial layouts
+* Auto-escaping is off by default (until Rails 3)
+
+## What is Erector
 
 Erb
 
@@ -36,7 +60,7 @@ Erector
       end
     end
 
-## Everything is ruby / class
+### Everything is ruby / class
 
 Your views are real classes, written in a real language, allowing:
 
@@ -44,54 +68,48 @@ Your views are real classes, written in a real language, allowing:
   * Inheritance, Composition, Delegation
   * Well-defined semantics for variables, loops, blocks
   * "Dependency injection" via constructor params (aka "Complete Construction")
+  * Entire stack is independant
 
-## Design Goals
+### Design Goals
 
-  * As little magic as possible while maintaining Rails compatibility
-  * All ruby idioms work as expected (e.g. yield)
-  * Very testable
   
-## Reasons for Erector
+## Common Problems
 
-A la Erb
+  <!-- you've all seen these -->
 
-  * Erb forces separate files
-  * Related code is scattered between ERB, partial, helpers module
-  * Refactoring can be hard
-  * Auto-escaping is off by default (until Rails 3)
-  * Layouts are special, treated differently than partial layouts
-  * Yield takes on special semantics
-  * Erb using string copies
+  * Refactoring can be hard because of 
+    * Consistent API - Everything renders to the buffer
+    * Related code is scattered between ERB, partial, helpers module
+    * Erector allows allows you to put where you want it
+
   * You are responsible for ensuring that tags are closed properly
-  * partial templates require passing in local variables or using global instance variables. 
+    * The issue of forgetting to close tags goes away.
+  
+  * Nested layouts require 2 different techniques: layouts, partial layouts
+    * Inheritable layouts via standard inheritance
+
   * Expressing domain-specific language is done via filenames
-  * In erb - output is whitespace sensitive, and you can't control indending/whitespace etc..
+    * You can create widgets that express domain concepts (Chronological View)
 
-A la Erector
+  * Auto-escaping is off by default (until Rails 3)
+    * Auto-escaping is on by default
 
- * Consistent API - Everything renders to the buffer
- * Refactoring (example)
- * Erector allows allows you to put where you want it
- * Inheritable layouts.
- * Yield works like all other ruby classes
- * Output is streamed for higher performance over string copy
- * The issue of forgetting to close tags goes away.
- * You can create widgets that express domain concepts (Chronological View)
- * Erector allows you to either render the entire buffer in a single line (great for production), or pretty print it with sensible indenting (great for debugging)
+## Speaker notes
 
-## Converting
+  * Output is streamed for higher performance over string copy
+  * Erector allows you to either render the entire buffer in a single line (great for production), or pretty print it with sensible indenting (great for debugging)
+  * Yield works like all other ruby classes
+
+### How to Converting
 
 Erector tool starts you off but doesn't do everything... why?
 
-    erect app/views/foos/*.html.erb
+    erector app/views/foos/*.html.erb
 
-## Challenges
-
- * Rails inconsistent helpers semantics
- 
 ## Roadmap
 
  * Generator (probably after the summer of code)
+ * Better integration with Rails - inconsistent helpers semantics make this very hard
 
 ## Examples
 
