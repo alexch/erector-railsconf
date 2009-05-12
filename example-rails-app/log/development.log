@@ -663,3 +663,1023 @@ ActionView::TemplateError (undefined method `needs' for Views::Erector::Articles
 Rendered rescues/_trace (134.3ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-06 17:09:56) [GET]
+
+NameError (uninitialized constant PagesController):
+  
+
+Rendered rescues/_trace (31.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-06 17:11:14) [GET]
+
+LoadError (Expected /Users/jeff/Sites/lab/erector-railsconf/example-rails-app/app/controllers/articles_controller.rb to define ArticlesController):
+  
+
+Rendered rescues/_trace (28.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:11:30) [GET]
+  [4;36;1mArticle Load (21.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (uninitialized constant Views::Erector) on line #1 of app/views/articles/index.rb:
+1: class Views::Erector::Articles::Index < Erector::RailsWidget
+2: 
+3:   def content
+4:     h2 "Articles"
+
+    app/views/articles/index.rb:1
+
+Rendered rescues/_trace (111.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:11:41) [GET]
+  [4;35;1mArticle Load (1.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `truncate' for #<Views::Articles::Index:0x2652910>) on line #13 of app/views/articles/index.rb:
+10:       
+11:       articles.each do |article|
+12:         tr do
+13:           widget Views::Widgets::Title.new(:title => article.title)
+14:         end
+15:       end
+16:     end
+
+    app/views/widgets/title.rb:5:in `content'
+    app/views/widgets/title.rb:4:in `content'
+    app/views/articles/index.rb:13:in `content'
+    app/views/articles/index.rb:12:in `content'
+    app/views/articles/index.rb:11:in `each'
+    app/views/articles/index.rb:11:in `content'
+    app/views/articles/index.rb:6:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+
+Rendered rescues/_trace (120.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:11:55) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:12:08) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:17:51) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 1603ms (View: 1597, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:19:05) [GET]
+  [4;35;1mArticle Load (1.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.truncate) on line #14 of app/views/articles/index.rb:
+11:       articles.each do |article|
+12:         tr do
+13:           td do
+14:             link_to Views::Widgets::Title.new(:title => article.title).to_s, article
+15:           end
+16:         end
+17:       end
+
+    app/views/widgets/title.rb:5:in `content'
+    app/views/widgets/title.rb:4:in `content'
+    app/views/articles/index.rb:14:in `content'
+    app/views/articles/index.rb:13:in `content'
+    app/views/articles/index.rb:12:in `content'
+    app/views/articles/index.rb:11:in `each'
+    app/views/articles/index.rb:11:in `content'
+    app/views/articles/index.rb:6:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+
+Rendered rescues/_trace (57.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:19:49) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `article_path' for #<ActionView::Base:0x22eac8c>) on line #18 of app/views/articles/index.rb:
+15:             Views::Widgets::Title.new(:title => article.title)
+16:           end
+17:           td do
+18:             link_to "Edit", article
+19:           end
+20:         end
+21:       end
+
+    (eval):2:in `link_to'
+    app/views/articles/index.rb:18:in `content'
+    app/views/articles/index.rb:17:in `content'
+    app/views/articles/index.rb:13:in `content'
+    app/views/articles/index.rb:12:in `each'
+    app/views/articles/index.rb:12:in `content'
+    app/views/articles/index.rb:6:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+
+Rendered rescues/_trace (60.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:20:13) [GET]
+  [4;35;1mArticle Load (1.6ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:20:25) [GET]
+  [4;36;1mArticle Load (1.7ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:21:00) [GET]
+  [4;35;1mArticle Load (1.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 23ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 17:21:08) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 24ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:21:11) [GET]
+  Parameters: {"id"=>"1"}
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `article' for #<Views::Articles::Show:0x2396d98>) on line #4 of app/views/articles/show.rb:
+1: class Views::Articles::Show < Erector::RailsWidget  
+2: 
+3:   def content
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+
+    app/views/articles/show.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+
+Rendered rescues/_trace (41.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:21:28) [GET]
+  Parameters: {"id"=>"1"}
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `article' for #<Views::Articles::Show:0x223042c>) on line #4 of app/views/articles/show.rb:
+1: class Views::Articles::Show < Erector::RailsWidget  
+2: 
+3:   def content
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+
+    app/views/articles/show.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:21:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (18.8ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `text' for #<Comment:0x5150f4>) on line #6 of app/views/articles/show.rb:
+3:   def content
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:7:in `content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:6:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:22:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:24:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:24:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 17:24:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+
+ActionView::TemplateError (undefined local variable or method `current_user' for #<Views::Articles::Show:0x2238fa0>) on line #8 of app/views/articles/show.rb:
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+11: end
+
+    app/views/layouts/application.rb:12:in `content'
+    app/views/layouts/application.rb:10:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:47:19) [GET]
+  [4;36;1mArticle Load (4.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (Implement Me) on line #8 of app/views/articles/index.rb:
+5:     table do
+6:       tr do
+7:         th "Title"
+8:         th
+9:       end
+10:       articles.each do |article|
+11:         tr do
+
+    app/views/layouts/application.rb:32:in `sidebar'
+    app/views/layouts/application.rb:19:in `content'
+    app/views/layouts/application.rb:18:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (55.7ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:48:35) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (Implement Me) on line #8 of app/views/articles/index.rb:
+5:     table do
+6:       tr do
+7:         th "Title"
+8:         th
+9:       end
+10:       articles.each do |article|
+11:         tr do
+
+    app/views/layouts/application.rb:32:in `sidebar'
+    app/views/layouts/application.rb:19:in `content'
+    app/views/layouts/application.rb:18:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (53.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:48:41) [GET]
+  [4;36;1mArticle Load (1.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (Implement Me) on line #8 of app/views/articles/index.rb:
+5:     table do
+6:       tr do
+7:         th "Title"
+8:         th
+9:       end
+10:       articles.each do |article|
+11:         tr do
+
+    app/views/layouts/application.rb:32:in `sidebar'
+    app/views/layouts/application.rb:19:in `content'
+    app/views/layouts/application.rb:18:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (53.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:48:41) [GET]
+  [4;35;1mArticle Load (1.5ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (Implement Me) on line #8 of app/views/articles/index.rb:
+5:     table do
+6:       tr do
+7:         th "Title"
+8:         th
+9:       end
+10:       articles.each do |article|
+11:         tr do
+
+    app/views/layouts/application.rb:32:in `sidebar'
+    app/views/layouts/application.rb:19:in `content'
+    app/views/layouts/application.rb:18:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (52.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:48:42) [GET]
+  [4;36;1mArticle Load (1.8ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+
+ActionView::TemplateError (Implement Me) on line #8 of app/views/articles/index.rb:
+5:     table do
+6:       tr do
+7:         th "Title"
+8:         th
+9:       end
+10:       articles.each do |article|
+11:         tr do
+
+    app/views/layouts/application.rb:32:in `sidebar'
+    app/views/layouts/application.rb:19:in `content'
+    app/views/layouts/application.rb:18:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/index.rb:8:in `_run_rb_app47views47articles47index46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (52.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:49:21) [GET]
+  [4;36;1mArticle Load (4.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 41ms (View: 32, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:49:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `date' for #<Comment:0x275b320>) on line #7 of app/views/articles/show.rb:
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+
+    app/helpers/comments_helper.rb:5:in `display_date'
+    app/helpers/comments_helper.rb:4:in `display_date'
+    app/views/comments/show.rb:7:in `content'
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:7:in `main_content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:6:in `main_content'
+    app/views/layouts/application.rb:15:in `content'
+    app/views/layouts/application.rb:14:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (138.3ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:50:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `date' for #<Comment:0x2420c64>) on line #7 of app/views/articles/show.rb:
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+
+    app/helpers/comments_helper.rb:5:in `display_date'
+    app/helpers/comments_helper.rb:4:in `display_date'
+    app/views/comments/show.rb:7:in `content'
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:7:in `main_content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:6:in `main_content'
+    app/views/layouts/application.rb:15:in `content'
+    app/views/layouts/application.rb:14:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (137.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:50:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `date' for #<Comment:0x236b5d0>) on line #7 of app/views/articles/show.rb:
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+
+    app/helpers/comments_helper.rb:5:in `display_date'
+    app/helpers/comments_helper.rb:4:in `display_date'
+    app/views/comments/show.rb:7:in `content'
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:7:in `main_content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:6:in `main_content'
+    app/views/layouts/application.rb:15:in `content'
+    app/views/layouts/application.rb:14:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (67.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 22:51:22) [GET]
+  [4;36;1mArticle Load (4.6ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 43ms (View: 33, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:51:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 317ms (View: 311, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:56:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.4ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (3.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `formatted_date' for #<ActionView::Base:0x2362e58>) on line #7 of app/views/articles/show.rb:
+4:     h2 article.title
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+
+    app/views/comments/show.rb:7:in `content'
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:7:in `main_content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:6:in `main_content'
+    app/views/layouts/application.rb:15:in `content'
+    app/views/layouts/application.rb:14:in `content'
+    app/views/layouts/application.rb:9:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (74.1ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:57:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 22:59:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `stylesheet_tag' for #<Views::Articles::Show:0x22853f0>) on line #8 of app/views/articles/show.rb:
+5:     
+6:     article.comments.each do |comment|
+7:       widget Views::Comments::Show.new(:comment => comment)
+8:     end
+9:   end
+10: 
+11: end
+
+    app/views/layouts/application.rb:7:in `content'
+    app/views/layouts/application.rb:5:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (51.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:00:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:08:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (2.2ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 27ms (View: 19, DB: 2) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:10:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.9ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:10:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:10:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:11:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:12:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:13:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:13:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 183ms (View: 177, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:13:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.7ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 30ms (View: 21, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:14:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:14:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 28ms (View: 17, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:15:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.7ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:17:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 27ms (View: 19, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:19:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:19:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (2.4ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 40ms (View: 32, DB: 3) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:20:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+
+ActionView::TemplateError (undefined method `month_name' for Mon May 04 17:39:55 UTC 2009:Time) on line #7 of app/views/articles/show.rb:
+4:     h2 "Article: %s" % article.title
+5: 
+6:     h3 "Comments"
+7:     
+8:     article.comments.each do |comment|
+9:       widget Views::Comments::Show.new(:comment => comment)
+10:     end
+
+    app/helpers/comments_helper.rb:6:in `formatted_date'
+    app/helpers/comments_helper.rb:4:in `formatted_date'
+    app/views/comments/show.rb:7:in `content'
+    app/views/comments/show.rb:6:in `content'
+    app/views/comments/show.rb:4:in `content'
+    app/views/articles/show.rb:9:in `main_content'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    /opt/local/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    app/views/articles/show.rb:8:in `main_content'
+    app/views/layouts/application.rb:17:in `content'
+    app/views/layouts/application.rb:16:in `content'
+    app/views/layouts/application.rb:11:in `content'
+    app/views/layouts/application.rb:10:in `content'
+    app/views/layouts/application.rb:4:in `content'
+    app/views/articles/show.rb:8:in `_run_rb_app47views47articles47show46rb'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (108.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:23:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:24:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.6ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 100ms (View: 15, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:24:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.3ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:26:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.2ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;35;1mComment Load (0.8ms)[0m   [0mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 23:27:53) [GET]
+  [4;36;1mArticle Load (1.8ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-06 23:28:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-06 23:28:29) [GET]
+  [4;35;1mArticle Load (1.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 97ms (View: 90, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 08:52:47) [GET]
+  [4;36;1mArticle Load (21.2ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 30 OFFSET 0[0m
+Rendering articles/index
+Completed in 203ms (View: 156, DB: 21) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 08:53:29) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering articles/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 08:53:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (15.4ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 785ms (View: 764, DB: 16) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 08:53:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 08:54:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 08:54:11) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering articles/index
+Completed in 80ms (View: 74, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 08:54:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.6ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 08:54:16) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering articles/index
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 09:46:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 09:46:35) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering articles/index
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 09:49:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.2ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.5ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2009-05-07 10:07:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.3ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering articles/show
+  [4;36;1mComment Load (0.7ms)[0m   [0;1mSELECT * FROM "comments" WHERE ("comments".article_id = 1) [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:07:32) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+
+NoMethodError (undefined method `title' for "Advanced Views with Erector : Railsconf 2009":String):
+  app/views/articles/index.rb:4:in `title'
+  app/views/layouts/application.rb:6:in `content'
+  app/views/layouts/application.rb:5:in `content'
+  app/views/layouts/application.rb:4:in `content'
+  app/controllers/articles_controller.rb:7:in `index'
+
+Rendered rescues/_trace (42.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:07:53) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+
+NoMethodError (undefined method `new' for #<Views::Articles::Index:0x2363cb8>):
+  compiled-template:1:in `_run_inline_66316462'
+  app/controllers/articles_controller.rb:7:in `index'
+
+Rendered rescues/_trace (112.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:08:10) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+
+NoMethodError (undefined method `title' for "Advanced Views with Erector : Railsconf 2009":String):
+  app/views/articles/index.rb:4:in `title'
+  app/views/layouts/application.rb:6:in `content'
+  app/views/layouts/application.rb:5:in `content'
+  app/views/layouts/application.rb:4:in `content'
+  compiled-template:1:in `_run_inline_66316462'
+  app/controllers/articles_controller.rb:7:in `index'
+
+Rendered rescues/_trace (47.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:09:28) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:10:41) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 18ms (View: 12, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:10:54) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 87ms (View: 81, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:11:15) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 11ms (View: 1, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:11:38) [GET]
+  [4;35;1mArticle Load (0.8ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index to js (for 127.0.0.1 at 2009-05-07 10:12:18) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/articles.js]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2009-05-07 10:12:22) [GET]
+  [4;35;1mArticle Load (0.7ms)[0m   [0mSELECT * FROM "articles" LIMIT 5 OFFSET 0[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/articles]

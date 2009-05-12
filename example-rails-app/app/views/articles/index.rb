@@ -1,19 +1,22 @@
-class Views::Erector::Articles::Index < Erector::RailsWidget
+class Views::Articles::Index < Views::Layouts::Application
 
-  needs :articles
-
-  class ArticlesTable < Erector::Widgets::Table
-    column :title
-    column :created_at, "Date Created" do |article| 
-      text article.created_at.to_s(:long)
-    end
-    row_classes :dark, :light
-  end
-
-  def content
+  def main_content
     h2 "Articles"
-
-    widget ArticlesTable, :row_objects => articles
+    table do
+      tr do
+        th "Title"
+        th
+      end
+      articles.each do |article|
+        tr do
+          td do
+            text Views::Widgets::Title.new(:title => article.title)
+          end
+          td do
+            link_to "Show", article
+          end
+        end
+      end
+    end
   end
-
 end

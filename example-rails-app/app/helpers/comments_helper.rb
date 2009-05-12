@@ -1,8 +1,10 @@
 module CommentsHelper
   
-  def display_date(comment)
+  def formatted_date(comment)
     "".tap do |html|
-      html << content_tag(:span, comment.date.year, :class => "Foo")
+      html << content_tag(:span, comment.created_at.strftime("%b"))
+      html << content_tag(:span, comment.created_at.day)
+      html << content_tag(:span, comment.created_at.year)
     end
   end
   

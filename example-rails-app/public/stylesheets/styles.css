@@ -1,0 +1,37 @@
+body {
+    font-family: Helvetica;
+}
+
+div.wrapper{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.comment .date span{
+    display: block;
+    float: left;
+    clear: left;
+    color: #999;
+    text-align: center;
+    width: 40px;
+    font-weight: bold;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0;
+    clear: left;
+    float: left;
+}
+
+.comment .content{
+    margin-left: 50px;
+}
+
+.footer {
+    clear: left;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+}

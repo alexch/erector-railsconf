@@ -4,42 +4,33 @@ class Views::Layouts::Application < Erector::RailsWidget
     html do
       head do
         title "Advanced Views with Erector : Railsconf 2009"
+        stylesheet_link_tag "styles"
       end
 
       body do
-        div :class => "right" do
-          text "Hi, "
-          text current_user.name
-        end
-        
-        div :class => "head" do
-          h1 "Advanced Views with Erector"
-        end
+        div :class => "wrapper" do
+          div :class => "head" do
+            h1 "Advanced Views with Erector"
+          end
 
-        div :class => "content" do
-          main_content
+          div :class => "content" do
+            main_content
+          end
+
+          div :class => "footer" do
+            footer
+          end
         end
       end
     end
   end
-  
-  def main_content
-    ""
+
+  protected
+
+  def main() end
+
+  def footer
+    link_to "Articles", articles_path
   end
 
 end
-
-
-class Views::Article::Show < View::Application
-  needs :article
-  def main_content
-    h1 "Article"
-    widget Article, :article => @article
-  end
-end
-
-get "/article/:id" do
-  artcile = Article.find(params[:id])
-  Views::Article::View.new(article => article).to_s
-end
-
